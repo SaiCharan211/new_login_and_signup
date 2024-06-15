@@ -11,7 +11,7 @@ app.use(express.json())
 
 //mongoose.connect("mongodb://localhost:27017/NewEmployee")
 //mongoose.connect("mongodb+srv://saicharan:saicharan@cluster0.hdftqcp.mongodb.net/NewEmployee?retryWrites=true&w=majority&appName=Cluster0")
-//mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL)
 
 
 app.post('/',(req,res)=>{
