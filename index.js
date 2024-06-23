@@ -36,4 +36,13 @@ app.post('/login',(req,res)=>{
           }
      })
 })
+
+app.get('/data',async(req,res)=>{
+     try {
+        const data=await  EmployeeModel.find()
+        res.json(data) 
+     } catch (error) {
+          res.send(error)
+     }
+})
 app.listen(process.env.PORT,console.log("server running"))
